@@ -5,7 +5,7 @@ var helmet = require('helmet');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// the __dirname is the current directory from where the script is running
+// the __dirname is the current directory
 const path = require('path')
 app.use(helmet())
 // Serve static files from the React frontend app

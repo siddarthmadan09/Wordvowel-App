@@ -46,7 +46,9 @@ class App extends Component {
     const body = await response.text();
     this.setState({ outputValue: body });
   }
-
+/**
+ * the render function
+ */
   render() {
     
     return (

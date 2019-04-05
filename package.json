@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "vowel/consonant app",
   "main": "server.js",
-  "author": "Siddarth Madan",
+  "author": "Siddarth Madan kumar",
   "license": "ISC",
   "scripts": {
     "client": "cd client && npm start",

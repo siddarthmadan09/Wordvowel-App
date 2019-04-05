@@ -8,7 +8,9 @@ class BarChart extends Component {
     componentDidMount() {
       this.displayBarChart();
     }
-
+    /**
+     * update the letter frequncy count
+     */
    updateData = function() {
     var text = d3.select("body").select("textarea").node().value;
   
