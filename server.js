@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 const path = require('path')
 app.use(helmet())
 // Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static(path.join(__dirname, 'client/build')))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
