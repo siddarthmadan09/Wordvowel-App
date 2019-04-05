@@ -2,39 +2,24 @@
   "name": "react-full-stack",
   "version": "1.0.0",
   "description": "vowel/consonant app",
-  "main": "src/server/index.js",
-  "engines": {
-    "node": "10.15.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "now-build": "npm install && npm run build"
-  },
+  "main": "server.js",
   "author": "Siddarth Madan",
   "license": "ISC",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "dev:server": "cd client && npm run build && cd .. && npm run start",
+    "start": "node server.js",
+    "now-build": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "d3": "^5.9.2",
     "express": "^4.16.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "2.1.8"
+    "body-parser": "^1.18.3"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "helmet": "^3.16.0",
     "nodemon": "^1.17.3"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "proxy": "http://localhost:5000",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }

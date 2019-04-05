@@ -4,10 +4,10 @@
     "public": false,
     "builds": [
       { "src": "package.json", "use": "@now/static-build" },
-      { "src": "/src/server/index.js", "use": "@now/node-server" }
+      { "src": "server.js", "use": "@now/node-server" }
     ],
     "routes": [
-      { "src": "/api/.*", "dest": "/src/server/index.js" },
+      { "src": "/api/.*", "dest": "server.js" },
       { "src": "^/static/(.*)", "dest": "/static/$1" }
     ]
   }
