@@ -13,7 +13,18 @@ app.use(express.static(path.join(__dirname, 'dist')))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+//production mode
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'client/build')));
+    //
+    app.get('*', (req, res) => {
+      res.sendfile(path.join(__dirname = 'client/build/index.html'));
+    })
+  }
+  //build mode
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/public/index.html'));
+  })
 
 app.post('/api/randomize-vowels', (req, res) => {
     result = randomizeVowels(req.body.input);
@@ -24,10 +35,6 @@ app.post('/api/randomize-consonants', (req, res) => {
     result = randomizeConsonants(req.body.input);
   res.send(`${result}`);
 });
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
-  })
 
 app.listen(port, () => console.log(`Listening on port ${process.env.PORT || 5000}!`));
 
