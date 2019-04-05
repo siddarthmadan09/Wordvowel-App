@@ -1,0 +1,43 @@
+
+
+body {
+  margin: 5px;
+  padding: 2px;
+
+  background-color: whitesmoke;
+}
+
+svg {
+    width: 600px;
+    height: 490px;
+  }
+
+ #bounds {
+  fill: white;
+  stroke: #bbbbbb;
+  stroke-width: 1px;
+}
+
+rect.bar {
+  stroke: none;
+  fill: #005403;
+}
+
+#x-axis text,
+#y-axis text {
+  font-size: 10pt;
+}
+
+
+#x-axis line {
+  fill: none;
+  stroke: none;
+}
+
+#x-axis path,
+#y-axis path,
+#y-axis line {
+  fill: none;
+  stroke: #bbbbbb;
+  stroke-width: 1px;
+}

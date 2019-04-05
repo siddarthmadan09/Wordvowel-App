@@ -1,0 +1,40 @@
+{
+  "name": "react-full-stack",
+  "version": "1.0.0",
+  "description": "vowel/consonant app",
+  "main": "src/server/index.js",
+  "engines": {
+    "node": "10.15.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "now-build": "npm install && npm run build"
+  },
+  "author": "Siddarth Madan",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "d3": "^5.9.2",
+    "express": "^4.16.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.1.8"
+  },
+  "devDependencies": {
+    "helmet": "^3.16.0",
+    "nodemon": "^1.17.3"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "proxy": "http://localhost:5000",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

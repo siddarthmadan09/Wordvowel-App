@@ -1,0 +1,40 @@
+
+.container{
+  padding: 1em;
+  height: 100%;
+  width: 100%;
+}  
+
+.title{
+  font-size: 18px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .section{
+    height: 70%;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .section{
+    width: 50%;
+    height: 70%;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+}
+
+.textarea{
+  height: 70%;
+  outline: none;
+  resize: none;
+  overflow: auto;
+}
+
+.button{
+  padding: 20px;
+  margin: 20px !important;
+}
