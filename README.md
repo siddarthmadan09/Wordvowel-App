@@ -4,7 +4,7 @@ https://wordplay.siddarthmadan09.now.sh/
 
 ### Folder Structure
 
-All the source code will be inside **src** directory. Inside src, there is client and server directory. All the frontend code (react, css, js and any other assets) will be in client directory. Backend Node.js/Express code will be in the server directory.
+ All the frontend code (react, css, js and any other assets) will be in client directory. Backend Node.js/Express code will be in the server.js file.
 
 Packages installed:
 Babel,
